@@ -16,10 +16,6 @@ if(MSVC)
 set(libsToLink)
 endif()
 
-#set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../bin)
-#set(RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../bin)
-#set(ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/../bin)
-
 link_directories(${LinkDir})
 link_libraries(${libsToLink})
 

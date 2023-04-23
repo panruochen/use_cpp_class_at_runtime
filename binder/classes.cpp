@@ -1,3 +1,8 @@
+/*
+ *  Bind to C++ class functions at runtime.
+ *
+ *  Copyright (c) 2021-2023, Pan Ruochen <ijkxyz@msn.com>.
+ */
 #include "y2.h"
 #include "dynload.hpp"
 

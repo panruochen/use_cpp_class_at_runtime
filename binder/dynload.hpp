@@ -1,12 +1,17 @@
+/*
+ *  Bind to C++ class functions at runtime.
+ *
+ *  Copyright (c) 2021-2023, Pan Ruochen <ijkxyz@msn.com>.
+ */
+
 #if _SO_RUNTIME_BINDING
 
 #include <string>
 #include <string.h>
 
 #if WIN32
-#	include <windows.h>
-
-#	define RTLD_NOW 0
+# include <windows.h>
+# define RTLD_NOW 0
 
 static inline void *dlopen(const char *filename, int flags) {
 	return LoadLibraryA(filename);
@@ -32,7 +37,7 @@ static inline std::string getLastError()
 }
 
 #elif LINUX
-#	include <dlfcn.h>
+# include <dlfcn.h>
 
 static inline std::string getLastError()
 {
@@ -65,9 +70,7 @@ struct DynBinder {
 	int (CxxReader2::*read2)(int fd, void *buf, int bufLen);
 
 	int init();
-	inline DynBinder() {
-		memset(this, 0, sizeof(*this));
-	}
+	inline DynBinder() { memset(this, 0, sizeof(*this)); }
 };
 
 extern DynBinder *const dynBinder;

@@ -1,3 +1,5 @@
+#!/usr/bin/python3 -f
+
 import os, sys, platform, subprocess
 
 print("OS %s" % os.name)
@@ -8,7 +10,7 @@ new_env = os.environ.copy()
 system_name = platform.system()
 
 if system_name.find("MSYS_NT") >= 0 or system_name == "Windows" :
-	cmake_tool = 'D:/Tools/ly/cmake-3.14.5/bin/cmake'
+	cmake_tool = 'cmake'
 	make_tool = 'nmake -nologo'
 	generator = "NMake Makefiles"
 elif system_name.find("Linux") >= 0 :

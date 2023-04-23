@@ -1,3 +1,9 @@
+/*
+ *  Use C++ class functions at runtime and keep the code clean.
+ *
+ *  Copyright (c) 2021-2023, Pan Ruochen <ijkxyz@msn.com>.
+ */
+
 #include <stdio.h>
 #include "y1.h"
 #include "y2.h"
